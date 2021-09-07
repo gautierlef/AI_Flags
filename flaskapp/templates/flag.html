@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/logo.png') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.2.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <base href="/" />
+  </head>
+  <body style="background-color: #ffe4c4">
+  <center>
+    <div>
+      <h1 class="title" style="text-align: center">Drapeau</h1>
+      <p>Votre image:</p>
+      <img style="width: 500px" src="{{path}}">
+      <br>
+      <p>{{predict}}</p>
+      <form role="form" action="/note" method="POST">
+        <a href="/">>Retour à la page d'accueil</a>
+      </form>
+    </div>
+  </center>
+  </body>
+</html>
